@@ -1,0 +1,21 @@
+server:
+  servlet:
+    context-path: /api/v1
+
+spring:
+  main:
+    banner-mode: "off"
+  application:
+    name: reminder
+  datasource:
+    username: postgres
+    password: postgrespw
+    driverClassName: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:55000/postgres
+  jpa:
+    hibernate:
+      ddl-auto: none
+  liquibase:
+    change-log: classpath:db.changelog/db.changelog-master.sql
+
+
